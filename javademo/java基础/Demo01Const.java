@@ -50,7 +50,7 @@
 	}
 }*/
 
-public class Demo01Const{
+/*public class Demo01Const{
 	public static void main(String[] args){
 		//int a = 20;
 		//int b = 30;
@@ -63,9 +63,41 @@ public class Demo01Const{
 		int result2 = x % y;
 		System.out.println(result2);
 	}
+}*/
+
+public class Demo01Const{
+	public static void main(String[] args){
+		cook();
+	
+	}
+	//我
+	public static void me(){		
+		System.out.println("吃");
+	}
+	//厨子
+	public static void cook(){		
+		System.out.println("洗菜");
+		System.out.println("切菜");
+		System.out.println("炒菜");
+		System.out.println("装盘");
+	}
+	//小商贩
+	public static void seller(){		
+		System.out.println("运输到农贸市场");
+		System.out.println("抬高价格");
+		System.out.println("吆喝");
+		System.out.println(" 卖给厨子");
+	}
+	//农名伯伯
+	public static void farmer(){
+		System.out.println("播种");
+		System.out.println("浇水");
+		System.out.println("施肥");
+		System.out.println("除虫");
+		System.out.println("收割");
+		System.out.println("卖给小商贩");
+	}
 }
-
-
 
 
 
