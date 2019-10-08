@@ -34,11 +34,57 @@ package cn.itcast.day04.demo01.demo03;
 直接打印数组名称，得到的是数组对应的，内存地址哈希值
 访问数组元素的格式：数组名称[索引值]
 注意：索引值从0开始，一直到“数据的长度-1”为止
+
+ */
+/*
+遍历数组：说的就是对数组中的每一个元素进行逐一、挨个儿处理，默认的处理方式就是打印输出
+
  */
 public class Demo01Array {
     public static void main(String[] args) {
-        int[] array = {10, 20, 30};
-        System.out.println(array[0]);//[I@71e7a66b [代表是一个数组，I代表这是一个int类型，@
+        /*int[] array = {10, 20, 30};
+//        System.out.println(array[0]);//[I@71e7a66b [代表是一个数组，I代表这是一个int类型，@
+        for(int i = 0;i<array.length;i++){
+            System.out.println("数组是："+array[i]);
+        }*/
+
+        //求最大值
+//        int array[] = {5,15,30,20,10000};
+//
+//        int max = array[0];
+//        for(int i = 1 ;i<array.length;i++){
+//            if(array[i]>max){
+//                max = array[i];
+//            }
+//
+//        }
+//        System.out.println("最大值是："+max);
+
+        //数组的逆向
+        int array[] = {34,11,46,78,98,34,35};
+        System.out.print("原数组是：");
+        for(int i = 0;i < array.length ;i++){
+
+            System.out.print(array[i]+" ");
+        }
+        System.out.println("***************");
+        for(int min=0,max=array.length-1;min<max;max--,min++){
+            int temp = array[min];
+            array[min] = array[max];
+            array[max] = temp;
+        }
+
+        System.out.print("后来的数组是：");
+        for(int i = 0;i < array.length ;i++){
+
+            System.out.print(array[i]+" ");
+        }
+
+
+
+
+
+
 
     }
 
