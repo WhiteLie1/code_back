@@ -2,7 +2,7 @@ package cn.itcast.day04.demo01.demo03;
 /*
 题目：定义要给方法，用来判断两个数字是否相同
  */
-public class Demo01MethodSame {
+public class        Demo01MethodSame {
     public static void main(String[] args){
 //        System.out.println(isSame(10,10));; //判断两个值是否相等
 //        System.out.println("结果是："+getSum());
