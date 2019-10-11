@@ -42,6 +42,13 @@ package cn.itcast.day04.demo01.demo03;
  */
 public class Demo01Array {
     public static void main(String[] args) {
+        int [] result = calculate(10,20,30);
+        System.out.println("main方法接收到的返回值数组是：");
+        System.out.println(result);
+        System.out.println("总和："+result[0]);
+        System.out.println("平均数："+result[1]);
+
+    }
         /*int[] array = {10, 20, 30};
 //        System.out.println(array[0]);//[I@71e7a66b [代表是一个数组，I代表这是一个int类型，@
         for(int i = 0;i<array.length;i++){
@@ -61,7 +68,7 @@ public class Demo01Array {
 //        System.out.println("最大值是："+max);
 
         //数组的逆向
-        int array[] = {34,11,46,78,98,34,35};
+        /*int array[] = {34,11,46,78,98,34,35};
         System.out.print("原数组是：");
         for(int i = 0;i < array.length ;i++){
 
@@ -78,15 +85,34 @@ public class Demo01Array {
         for(int i = 0;i < array.length ;i++){
 
             System.out.print(array[i]+" ");
-        }
+        }*/
 
+    //如何返回两个值
+    public static int[] calculate(int a,int b,int c){
+        int sum = a+b+c;
+        int avg = sum/3;
+        //对两个结果进行返回，一个数组，来保存多个结果
+        /*int [] array = new int[2];
+        array[0] = sum;
+        array[1] = avg;
+        return array;*/
 
-
-
-
-
+        int [] array = {sum,avg};
+        System.out.println("calculate方法内部数组是：");
+        System.out.println(array);//地址值是
+        return array;
 
     }
+
+
+
+
+
+
+
+
+
+
 
 }
 
