@@ -9,7 +9,9 @@ public class Demo03Person {
         person.name="fjakjflk";
 //        person.age=18;
         person.setAge(-20);
+        person.setMale(true);
         person.show();
+        System.out.println("是不是爷们："+person.isMale());
 
     }
 
