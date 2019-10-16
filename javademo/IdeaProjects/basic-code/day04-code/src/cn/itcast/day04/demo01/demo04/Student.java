@@ -27,13 +27,13 @@ public class Student {
         this.age = age;
         System.out.println("全参构造方法执行啦");
     }
-    public void setName(){
+    public void setName(String name){
         this.name = name;
     }
     public String getName(){
         return name;
     }
-    public void setAge(){
+    public void setAge(int age){//这里面的参数名要与局部变量的参数对应起来
         this.age = age;
     }
     public int getAge(){

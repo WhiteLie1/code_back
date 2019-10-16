@@ -8,7 +8,9 @@ public class Demo04Student {
 
         System.out.println("姓名："+stu2.getName()+"年龄"+stu2.getAge());
         //如果需要改变对象当中的成员变量的数据内容，还需要使用setXxx方法
-        stu2.setAge(21);
+        stu2.setName("chenxin");
+        stu2.setAge(100);
+        System.out.println("姓名："+stu2.getName()+"年龄"+stu2.getAge());
 
     }
 }
