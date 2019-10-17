@@ -1,5 +1,7 @@
 package cn.itcast.day04.demo01.commonAPI;
 
+import java.util.Scanner;
+
 /**
  * scanner类的功能，可以实现键盘输入数据，到程序当中去
  * 引用类型的使用步骤：
@@ -13,6 +15,38 @@ package cn.itcast.day04.demo01.commonAPI;
  *
  * 3.使用
  * 对象名．成员方法名（）
+ * 获取键盘输入的一个int数字，int num = sc.nextInt()
+ * 获取键盘输入的一个字符串，String str = sc.next()
  */
 public class demo01Scanner {
+    public static void main(String[] args) {
+        //创建 System.in 代表从键盘输入
+        Scanner sc = new Scanner(System.in);
+
+        //获取int数字
+        int num = sc.nextInt();
+        System.out.println("输入的数字是："+num);
+        //字符串
+        String str = sc.next();
+        System.out.println("输入的字符串是："+str);
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
