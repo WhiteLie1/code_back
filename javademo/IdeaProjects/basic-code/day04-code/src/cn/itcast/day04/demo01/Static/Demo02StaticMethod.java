@@ -10,6 +10,9 @@ package cn.itcast.day04.demo01.Static;
 
 注意事项：
 1.静态不能直接访问非静态
+原因：因为在内存当中是【先】有的静态方法，【后】有的非静态内容
+”先人不知道后人，但是后人知道先人“
+2.静态方法 当中不能使用this
  */
 public class Demo02StaticMethod {
     public static void main(String[] args) {
