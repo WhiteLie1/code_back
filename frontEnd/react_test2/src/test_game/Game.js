@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-
-
 function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
@@ -44,7 +41,6 @@ class Board extends React.Component {
     }
 }
 
-//我们将其中的构造函数中为Game组件设置初始状态
 class Game extends React.Component {
     constructor(props) {
         super(props);
@@ -52,13 +48,12 @@ class Game extends React.Component {
             history: [{
                 squares: Array(9).fill(null)
             }],
-            stepNumber:0,
             xIsNext: true
         };
     }
 
     handleClick(i) {
-        const history = this.state.history.slice(0,this.state.stepNumber+1);
+        const history = this.state.history;
         const current = history[history.length - 1];
         const squares = current.squares.slice();
         if (calculateWinner(squares) || squares[i]) {
@@ -69,30 +64,21 @@ class Game extends React.Component {
             history: history.concat([{
                 squares: squares
             }]),
-            stepNumber:history.length,
             xIsNext: !this.state.xIsNext,
-        });
-    }
-
-    //跳转代码
-    jumpTo(step){
-        this.setState({
-            stepNumber:step,
-            xIsNext:(step % 2)===0
         });
     }
 
     render() {
         const history = this.state.history;
-        const current = history[this.state.stepNumber];
+        const current = history[history.length - 1];
         const winner = calculateWinner(current.squares);
-        //map方法，我们可以将移动历史映射到表示屏幕上按钮的React元素，并显示按钮列表以“跳动”到过去的移动
+
         const moves = history.map((step, move) => {
             const desc = move ?
                 'Go to move #' + move :
                 'Go to game start';
             return (
-                <li key={move}>
+                <li>
                     <button onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
@@ -148,4 +134,3 @@ function calculateWinner(squares) {
     }
     return null;
 }
-export default Game;
