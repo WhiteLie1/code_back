@@ -3,7 +3,8 @@ package cn.itcast.day04.demo01.Extends;
 在父子类的继承关系中，如果成员变量重名，则创建子类对象的时候，访问有两种访问方式：
 1.直接通过子类对象来访问成员变量：
     等号左边是谁，就优先用谁，没有则向上找
-2.间接通过成员方法访问成员变量
+2.间接通过成员方法访问成员变量:
+    该方法属于谁就优先用谁，没有则向上找
 
  */
 public class Demo01ExtendsField {
@@ -19,8 +20,11 @@ public class Demo01ExtendsField {
         System.out.println(zi.num);
 
         System.out.println("=============");
-        zi.methodZi();
-        zi.methodFu();
+        zi.methodZi();//200
+        //这个方法是在父类当中定义的
+        zi.methodFu();//100
+        System.out.println("****************");
+
 
     }
 }

@@ -1,13 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React ,{Component} from 'react';
+import ReactDOM,{render} from 'react-dom';
+import PropTypes from 'prop-types'
 /**
- *组件的两种定义方式以及他们之间的区别
+ *
  */
-let Message = (msg) =>{
-    return <h1>{msg}</h1>
+class Sum extends Component{
+    constructor(){
+        super();
+        this.state={a:0,b:0,result:0}
+    }
+    handleChangeA =()=>{
+        this.setState({
+
+        })
+    }
+    render() {
+        return (
+            <div>
+                <input onChange={this.handleChangeA} type="text" value={this.state.a}/>+
+                <input type="text" value={this.state.b}/>=
+                <input type="text" value={this.state.result}/>
+            </div>
+        );
+    }
 }
-ReactDOM.render(
-    <Message/>,app)
-);
-
-
+render(<Sum />,document.querySelector("#root"))
