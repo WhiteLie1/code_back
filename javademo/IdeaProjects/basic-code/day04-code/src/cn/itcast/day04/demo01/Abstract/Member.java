@@ -17,6 +17,8 @@ public class Member extends User {
         //根据索引，从集合当中删除，并且得到被删除的红包，然后给我自己
         int delta = list.remove(index);
         //当前成员自己有多少钱
+        int money = super.getMoney();
+        super.setMoney(money + delta);
 
     }
 }
