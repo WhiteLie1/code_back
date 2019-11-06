@@ -15,7 +15,40 @@ package cn.itcast.day04.demo01.Inside;
 }
 注意：
 内用外，随意访问，外用内，需内部类对象
+
+==============================
+如何使用成员内部类
  */
 public class Demo01InnerClass {
+    public static void main(String[] args) {
+        Body body = new Body(); // 外部类对象
+        // 通过外部类的对象，调用外部类的方法，在里面间接使用内部类Heart
+        body.methodBody();
+
+        System.out.println("==================");
+        // 按照公式写
+        Body.Heart heart = new Body().new Heart();
+        heart.heat();
+
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
