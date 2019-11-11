@@ -1,0 +1,5 @@
+.idea
+pkg
+src/gobackend/certfile
+src/gobackend/gobackend.exe
+src/gobackend/doc/swagger.yaml
