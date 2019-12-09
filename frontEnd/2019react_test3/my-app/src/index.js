@@ -1,6 +1,12 @@
-import React,{Component} from 'react';
-import {render} from 'react-dom';
+import React,{Component} from 'react'
+import {render} from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css'
-import Suggest from "./components/Suggest";
 import MessageBox from "./components/MessageBox";
-render(<MessageBox/>,document.querySelector("#root"))
+/**
+ * 1.珠峰留言板
+ * 2.
+ * 3.
+
+ */
+
+render(<MessageBox />,document.querySelector("#root"))
