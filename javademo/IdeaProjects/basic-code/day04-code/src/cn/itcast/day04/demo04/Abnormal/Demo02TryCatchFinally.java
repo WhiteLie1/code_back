@@ -26,7 +26,7 @@ public class Demo02TryCatchFinally {
         } catch (IOException e) { // 异常的处理逻辑
             e.printStackTrace();
         }finally { // 无论是否异常，都会执行
-            System.out.println("资源释放");
+            System.out.println("资源释放 ");
         }
     }
 
