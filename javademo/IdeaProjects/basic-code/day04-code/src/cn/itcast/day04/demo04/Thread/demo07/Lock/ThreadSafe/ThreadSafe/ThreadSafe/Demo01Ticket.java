@@ -1,19 +1,15 @@
-package cn.itcast.day04.demo04.Thread.demo07.Synchronized.ThreadSafe;
+package cn.itcast.day04.demo04.Thread.demo07.Lock.ThreadSafe.ThreadSafe.ThreadSafe;
 
 /*
     模拟买票案例
     创建三个线程，同时开启，对共享的票进行出售
     出现了安全问题，卖出了重复的票
-    解决线程安全问题的一种方案：使用同步代码块
-        格式：
-            synchronized(锁对象){
-                可能会出现的线程安全问题的代码(访问了共享数据库)
-            }
-        注意：
-            1.通过代码块中的锁对象，可以使用任意的对象
-            2.但是必须保证多个线程使用的锁对象是同一个
-            3 .锁对象作用：
-                把同步代码块锁住，只让一个线程在同步代码块中执行
+    解决线程安全问题的第三种方案：Lock锁
+        使用步骤：
+            1.在成员位置创建一个ReentrantLock对象
+            2.在可能出现安全问题代码前调用Lock接口的lock获取锁
+            3.在可能出现安全问题代码后调用Lock接口的unlock获取锁
+
 
  */
 public class Demo01Ticket {
