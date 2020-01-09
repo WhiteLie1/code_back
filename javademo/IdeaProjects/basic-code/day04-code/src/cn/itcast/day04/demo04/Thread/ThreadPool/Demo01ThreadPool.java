@@ -21,9 +21,10 @@ public class Demo01ThreadPool {
         es.submit(new RunnableImpl()); // pool-1-thread-2创建了一个新的线程执行！
         es.submit(new RunnableImpl()); // pool-1-thread-1创建了一个新的线程执行！
         // 4.调用ExecutorService中的方法shutdown销毁线程池(不建议执行)
-        es.shutdown();
+        es.shutdown();   
 
         es.submit(new RunnableImpl()); // 抛出异常，线程池已经关闭了，就不能获取线程了
 
     }
+
 }
