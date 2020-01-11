@@ -1,6 +1,7 @@
 package cn.itcast.day04.demo04.lambda;
 /*
     使用Runnable接口的方式实现多线程程序
+
  */
 public class Demo01Runnable {
     public static void main(String[] args) {
