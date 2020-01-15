@@ -15,6 +15,6 @@ public class Demo01File {
         System.out.println(pathSeparator);// ; (路径分隔符 windows:分号;linux:冒号)
 
         String separator = File.separator;
-        System.out.println(separator);// \ 文件名称分隔符：windows:\;linux:/
+        System.out.println(separator);
     }
 }
