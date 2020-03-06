@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8A8A8A",
+    "selectedColor": "#5F719B",
+    "list": [{
+      "pagePath": "pages/test/test",
+      "text": "蓝牙测试",
+      "iconPath": "pages/icoPath/L.png",
+      "selectedIconPath": "pages/icoPath/BL.png"
+    }, 
+     {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "pages/icoPath/BCS.png",
+      "selectedIconPath": "pages/icoPath/CS.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
+  }
+}
